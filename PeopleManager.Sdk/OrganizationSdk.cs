@@ -14,7 +14,7 @@ namespace PeopleManager.Sdk
         //Find
         public async Task<IList<OrganizationResult>> Find(Paging paging, OrganizationFilter? filter = null)
         {
-            var httpClient = _httpClientFactory.CreateClient("PeopleManagerApi");
+            var httpClient = _httpClientFactory.CreateClient("PeopleManager");
 
             var route = $"Organizations?paging.offset={paging.Offset}&paging.limit={paging.Limit}";
             
